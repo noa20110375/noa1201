@@ -1,0 +1,182 @@
+
+body {
+    margin: 0;
+    
+}
+
+a {
+    color: rgb(41, 128, 185);
+    font-size: 25px;
+    font-weight: bold;
+    /* 클릭시 색깔 변화 밑줄 안나옴 */
+    text-decoration: none;
+    text-align-last: center;
+}
+
+h1 {
+    color:rgb(41, 128, 185);;
+    font-weight: bold;
+    
+    font-size: 55px;
+    text-align: left;
+    margin: 0;
+    padding: 20px;
+    height:125px;
+}
+h2{
+    
+    font-size:35px;
+    /* 글자 굵기 */
+    font-weight: bold;
+    margin:0;
+}
+h3{
+    color:rgb(41, 128, 185);
+    font-size:30px;
+    /* 글자 굵기 */
+    font-weight: bold;
+    
+    margin: 0;
+}
+/* 헤더 설정 */
+header {
+
+    
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+    
+  }
+
+
+/* 드롭박스*/
+#dropdown{
+    /* 리스트 언더바, 클릭했던 페이지 색상 변경 X  */
+    list-style:none;
+    height:120px;
+    padding: 5px 1px;
+    margin : 0;
+    background-color: rgb(41, 128, 185);;
+  
+}
+/* 드롭박스 리스트 */
+#dropdown li{
+    float: left;
+
+    position:relative;
+    margin:5px 30px;
+    padding: 0;
+    
+}
+/* 드롭박스 리스트 a 태그*/
+#dropdown li a {
+    display:block;
+    
+    font-weight: bold;
+    font-size:18px;
+    padding: 7px 8px;
+    margin:0;
+    color:white;
+    margin:0;
+    text-decoration: none;
+    text-shadow:0 1px 1px rgba(0,0,0,0.3);
+   
+}
+/* 드롭박스 언오더리스트 설정 */
+#dropdown ul{
+    
+    list-style: none;
+    margin:0;
+    padding:0;
+    
+    left:0;
+    top:0px;
+    width:100x;
+    text-align: left;
+
+}
+/* 드롭박스 언오더리스트 리스트 설정 */
+#dropdown ul li{
+    background:rgb(224, 224, 224);
+    float:none;
+    margin:0;
+    padding:0;
+   display: none;
+}
+/* 드롭박스 마우스 올렸을 때 효과 */
+#dropdown li:hover> a{
+    
+    color:white;
+    margin:0;
+    padding:5px;
+    display: block;
+   }
+   
+#dropdown ul li:hover a{
+    background-color:rgb(224, 224, 224);
+   
+}
+
+#dropdown li:hover ul{
+    opacity :1;
+    
+}
+#dropdown li:hover ul li{
+    height:35px;
+    overflow:visible;
+    padding: 0;
+    display:block;
+}
+
+ul{
+    list-style: none;
+    padding : 0;
+}
+footer {
+    
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    padding: 0 25px;
+    line-height: 60px;
+    color: white;
+    font-weight: bold;
+    border-top: 1px solid #dee5e7;
+    background-color:black;
+  }
+  
+.section1 h1{
+    text-align: center;
+}
+/* 유투브 동영상 화면 비율에 따라 크기 조절 */
+.video-list ul li {
+    position: relative;
+    padding-bottom: 55%;
+    overflow: hidden;
+  }
+  
+  .video-list ul li iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* 화면 사이즈 미디어 쿼리 설정  */
+@media(max-width :764px){
+    #grid {
+        display: block;
+    }
+    #grid ol {
+        border-right: none;
+    }
+    h1 {
+        border-bottom: none;
+    }
+
+}

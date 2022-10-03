@@ -1,0 +1,122 @@
+body{
+    
+    margin: 0;
+    /* 구글  가져온 폰트 입력 */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+a{
+    /* 엥커 테그의 효과 제거 */
+    text-decoration: none;
+    color: white;
+    padding:8px 12px;
+}
+/* 헤더 navbar 설정 */
+.navbar{
+    /* 한줄로 보여줌 */
+    display: flex;
+    /*간격을 조절해줌 space-betwwen  */
+    justify-content: space-between;
+    /* 수직 정렬 */
+    align-items: center;
+    /* 배경컬러 설정 */
+    background-color: rgb(41, 128, 185);
+  
+}
+/* 로고와 타이틀 사이즈,굵기,색상*/
+.navbar__logo {
+    font-size: 24px;
+    font-weight:bold;
+    color: white;
+}
+/* 화이트로 하기에 굳이 필요없음. */
+.navbar__logo i{
+    color:white;
+}
+
+/*  */
+.navbar__menu{
+    display:flex;
+    /* 리스트의 스타일을 없애줌 */
+    list-style: none;
+    padding-left: 0;
+    font-weight:bold;
+}
+/* margin을 넣으면 크기가 작아짐.
+패딩을 넣으면  박스안에 넣기 좋음 */
+.navbar__menu li{
+    padding:8px 12px;
+}
+/* 마우스를 메뉴 글자에 올려두었을 때 배경색 변화 */
+.navbar__menu li:hover{
+    background-color: black;
+    /* 모서리를 둥글게 조절 */
+    border-radius: 4px;
+}
+/* 우측 아이콘 설정 */
+.navbar__icons {
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 0;
+}
+/* 아이콘 간격 */
+.navbar__icons li{
+    padding: 8px 12px ;
+}
+/* 햄버거 메뉴버튼 위치 */
+.navbar__toggleBtn{
+    display:none;
+    position:absolute;
+    right: 32px;
+    font-size: 24px;
+    color: white;
+    padding:0;
+    
+   
+}
+
+/* 레이아웃 반응형으로 만들기 */
+
+@media screen and (max-width: 768px){
+/* 창이 작아지면 메뉴목록이 밑으로 내려가게 하기 */
+    .navbar{
+        /* row에서 colum으로 바꿈 */
+        flex-direction: column;
+        /* 왼쪽으로 정렬 */
+        align-items: flex-start;
+       padding: 8px 24px;
+    }
+    .navbar__menu{
+        display: none;
+        flex-direction: column;
+        /* 메뉴 중간 정렬 */
+        align-items: center;
+        /* 너비조절로 중간 정렬 */
+        width:100%;
+    }
+    /* 메뉴리스트 마우스호버 영역 넓어짐 */
+    .navbar__menu li{
+        /* 너비 지정하면 자동으로 왼쪽으로감 */
+
+        width: 100%;
+        /* 다시 조절 */
+        text-align:center;
+    }
+    /* 아이콘 중간 정렬*/
+    .navbar__icons{
+        display: none;
+        justify-content: center;
+        
+        width: 100%;
+    }
+    /* 크기가 768보다 크면 사라짐 */
+    .navbar__toggleBtn{
+        display:block;
+        
+    }
+    .navbar__menu.active,
+    .navbar__icons.active{
+        display: flex;
+    }
+
+}
