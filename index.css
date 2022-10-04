@@ -10,8 +10,7 @@ a {
     font-weight: bold;
     /* 클릭시 색깔 변화 밑줄 안나옴 */
     text-decoration: none;
-    text-align-last: center;
-    
+  text-align: center;
 }
 
 h1 {
@@ -40,6 +39,7 @@ h3{
     margin: 0;
 }
 /* 헤더 설정 */
+
 .navbar{
     /* 한줄로 보여줌 */
     display: flex;
@@ -47,11 +47,14 @@ h3{
     justify-content: space-between;
     /* 수직 정렬 */
     align-items: center;
-    /* 배경컬러 설정 */
+    
     height:120px;
     margin:0;
     
     
+}
+.navbar__title{
+    padding-left: 0;
 }
 .navbar__menu{
     display:flex;
@@ -59,10 +62,11 @@ h3{
     list-style: none;
     padding-left: 0;
     font-weight:bold;
-    
+    margin:0;
 }
 .navbar__menu li{
-    padding:8px 12px;
+    padding:8px 30px;
+    
     justify-content: space-between;
 }
 .navbar__menu li:hover{
@@ -184,6 +188,7 @@ footer {
 .section1 h1{
     text-align: center;
 }
+
 /* 유투브 동영상 화면 비율에 따라 크기 조절 */
 .video-list ul li {
     position: relative;
@@ -203,18 +208,19 @@ footer {
     /* 창이 작아지면 메뉴목록이 밑으로 내려가게 하기 */
    
     h1{
-    padding: 6px;
+    padding: 5px;
     
         
     }
+    
     .navbar{
             /* row에서 colum으로 바꿈 */
             flex-direction: column;
             /* 왼쪽으로 정렬 */
             align-items: flex-start;
-           padding: px 24px;
+           padding: 10px 24px;
            height: 100px;
-           
+           margin:0;
           
         }
        
@@ -229,10 +235,11 @@ footer {
         /* 메뉴리스트 마우스호버 영역 넓어짐 */
         .navbar__menu li{
             /* 너비 지정하면 자동으로 왼쪽으로감 */
-    
+            display: flex;
+            flex-direction: column;
             width: 100%;
             /* 다시 조절 */
-            text-align:center;
+            
         }
         .dropdown  {
             display:none;
@@ -253,7 +260,9 @@ footer {
         .navbar__menu.active        {
             display: flex;
         }
-        #section1 {
-          display:none;
+        .section1 {
+            
+           padding:120px 0px;
+            
         }
     }
